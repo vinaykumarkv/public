@@ -13,7 +13,7 @@
       	<uniqueVersion>false</uniqueVersion>
       	<id>internal.repo</id>
       	<name>internal repo</name>
-      	<url>file:///home/</url>
+      	<url>file://home/</url>
       	<layout>default</layout>
     	</repository>
 	</distributionManagement>
