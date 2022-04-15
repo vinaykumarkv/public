@@ -8,13 +8,13 @@
 	<packaging>jar</packaging>
 	<version>0.1.0</version>
 	
-	  <distributionManagement>
+	<repositories>
     	<repository>
-      	<id>internal.repo</id>
-      	<name>vinaykumarkv</name>
-      	<url>git@github.com:vinaykumarkv/vinaykumarkv.git</url>
+      	<id>example-repo</id>
+      	<name>Example Repository</name>
+      	<url>file:///home/</url>
     	</repository>
-  	</distributionManagement>
+  	</repositories>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
