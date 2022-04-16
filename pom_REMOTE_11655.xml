@@ -8,23 +8,15 @@
 	<packaging>jar</packaging>
 	<version>0.1.0</version>
 	
-	<repositories>
-        <repository>
-            <id>myMavenRepoRead</id>
-            <url>https://mymavenrepo.com/repo/h4wuxMGHVURMPYgObkkt/</url>
-        </repository>
-    </repositories>
-
-	  <distributionManagement>
+	<distributionManagement>
     	<repository>
-            <id>myMavenRepoWrite</id>
-            <url>https://mymavenrepo.com/repo/Q9aVduyfOTKAhLdPohd3/</url>
-        </repository>
-        <snapshotRepository>
-            <id>myMavenRepoWrite</id>
-            <url>https://mymavenrepo.com/repo/Q9aVduyfOTKAhLdPohd3/</url>
-        </snapshotRepository>
-  	</distributionManagement>
+      	<uniqueVersion>false</uniqueVersion>
+      	<id>internal.repo</id>
+      	<name>internal repo</name>
+      	<url>file://home/</url>
+      	<layout>default</layout>
+    	</repository>
+	</distributionManagement>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -71,7 +63,19 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-surefire-plugin</artifactId>
+  			<version>2.20</version>
+  			<configuration>
+            		<verbose>true</verbose>
+        		<fork>true</fork>
+        		<argLine>-XX:MaxPermSize=500M</argLine>
+        		</configuration>
+			</plugin>
+
 		</plugins>
+		
 	</build>
 
 </project>

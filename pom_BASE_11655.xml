@@ -8,23 +8,13 @@
 	<packaging>jar</packaging>
 	<version>0.1.0</version>
 	
-	<repositories>
-        <repository>
-            <id>myMavenRepoRead</id>
-            <url>https://mymavenrepo.com/repo/h4wuxMGHVURMPYgObkkt/</url>
-        </repository>
-    </repositories>
-
-	  <distributionManagement>
-    	<repository>
-            <id>myMavenRepoWrite</id>
-            <url>https://mymavenrepo.com/repo/Q9aVduyfOTKAhLdPohd3/</url>
-        </repository>
-        <snapshotRepository>
-            <id>myMavenRepoWrite</id>
-            <url>https://mymavenrepo.com/repo/Q9aVduyfOTKAhLdPohd3/</url>
-        </snapshotRepository>
-  	</distributionManagement>
+	<distributionManagement>
+       <repository>
+         <id>internal.repo</id>
+         <name>Internal repo</name>
+         <url>file:///home/thara/testesb/in</url>
+       </repository>
+   	</distributionManagement>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
